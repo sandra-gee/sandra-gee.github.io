@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玛雅语言-玛雅语系历史、文字体系与学习入门指南</title>
+<meta name="description" content="玛雅语言指南：介绍玛雅语系的构成、玛雅文字的解读历程、主要分支语言、发音与语法特点，以及现代玛雅语的使用现状和学习入门建议。">
+<meta name="keywords" content="玛雅语言,玛雅语系,玛雅文字,玛雅语学习,尤卡坦玛雅语,基切语,象形文字">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --stone:#3b3128;
+  --stone-light:#5c4d3d;
+  --jade:#1f6f5c;
+  --jade-light:#2f9c81;
+  --clay:#b4552d;
+  --gold:#c9992f;
+  --paper:#f6f1e7;
+  --paper-2:#efe7d8;
+  --line:#d9cdb6;
+  --text:#2b241d;
+  --muted:#6f6252;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Songti SC","SimSun","Noto Serif SC",Georgia,serif;
+  background:var(--paper);
+  color:var(--text);
+  line-height:1.8;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:var(--jade);text-decoration:none;}
+a:hover{color:var(--clay);}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px;}
+
+/* 页眉 */
+.site-header{
+  background:linear-gradient(180deg,#3b3128 0%,#4a3d30 100%);
+  color:#f2e9da;
+  border-bottom:4px solid var(--gold);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:16px 20px;max-width:1180px;margin:0 auto;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:44px;height:44px;flex:0 0 44px;
+  background:radial-gradient(circle at 30% 30%,var(--jade-light),var(--jade));
+  border:2px solid var(--gold);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:700;color:#f6f1e7;
+  font-family:"Courier New",monospace;
+  letter-spacing:-1px;
+}
+.brand-text h1{
+  font-size:20px;font-weight:700;letter-spacing:1px;line-height:1.3;
+}
+.brand-text span{font-size:12px;color:#c9b79a;letter-spacing:2px;}
+.top-nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap;}
+.top-nav a{
+  color:#e6dbc7;font-size:14.5px;padding:6px 2px;
+  border-bottom:2px solid transparent;transition:.2s;
+}
+.top-nav a:hover{color:#fff;border-bottom-color:var(--gold);}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(47,156,129,.28),transparent 55%),
+    radial-gradient(circle at 8% 90%,rgba(201,153,47,.22),transparent 55%),
+    linear-gradient(135deg,#4a3d30,#332a22);
+  color:#f4ecdd;
+  padding:56px 0 48px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;right:-60px;bottom:-60px;
+  width:280px;height:280px;border-radius:50%;
+  border:2px dashed rgba(201,153,47,.35);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:center;
+  position:relative;z-index:2;
+}
+.hero h2{
+  font-size:34px;line-height:1.35;margin-bottom:16px;letter-spacing:.5px;
+}
+.hero h2 em{
+  font-style:normal;color:var(--gold);
+  border-bottom:3px solid rgba(201,153,47,.5);
+}
+.hero p{color:#d9cdb6;font-size:16px;margin-bottom:18px;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+.hero-tags span{
+  font-size:13px;padding:5px 13px;border-radius:20px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(201,153,47,.4);
+  color:#e6dbc7;letter-spacing:.5px;
+}
+.hero-panel{
+  background:rgba(246,241,231,.07);
+  border:1px solid rgba(201,153,47,.35);
+  border-radius:10px;
+  padding:22px 22px 18px;
+  backdrop-filter:blur(2px);
+}
+.hero-panel h3{
+  font-size:15px;color:var(--gold);letter-spacing:2px;margin-bottom:14px;
+  font-weight:600;
+}
+.hero-panel ul{list-style:none;}
+.hero-panel li{
+  font-size:14.5px;color:#ded3bd;padding:9px 0;
+  border-bottom:1px dashed rgba(217,205,182,.22);
+  display:flex;justify-content:space-between;gap:10px;
+}
+.hero-panel li:last-child{border-bottom:none;}
+.hero-panel li b{color:#f6f1e7;font-weight:600;}
+
+/* 通用区块 */
+.section{padding:52px 0;}
+.section.alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.section-head{margin-bottom:28px;}
+.section-head h2{
+  font-size:25px;color:var(--stone);letter-spacing:.5px;
+  display:inline-block;position:relative;padding-bottom:10px;
+}
+.section-head h2::after{
+  content:"";position:absolute;left:0;bottom:0;width:56px;height:3px;
+  background:var(--clay);border-radius:2px;
+}
+.section-head p{color:var(--muted);font-size:15px;margin-top:12px;max-width:820px;}
+
+/* 语系分支卡片 */
+.branch-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
+}
+.branch-card{
+  background:#fffdf8;border:1px solid var(--line);border-radius:10px;
+  padding:22px 20px;transition:.25s;position:relative;
+}
+.branch-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(59,49,40,.12);border-color:var(--jade-light);}
+.branch-card .num{
+  font-family:"Courier New",monospace;font-size:13px;color:var(--clay);
+  letter-spacing:2px;margin-bottom:8px;display:block;
+}
+.branch-card h3{font-size:17.5px;color:var(--stone);margin-bottom:10px;}
+.branch-card p{font-size:14.5px;color:var(--muted);}
+.branch-card .where{
+  margin-top:14px;font-size:13px;color:var(--jade);
+  background:rgba(31,111,92,.08);display:inline-block;
+  padding:3px 10px;border-radius:4px;
+}
+
+/* 文字体系 */
+.script-block{
+  display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;
+}
+.script-text p{font-size:15.5px;color:#3f362c;margin-bottom:15px;}
+.script-text h3{font-size:18px;color:var(--jade);margin:22px 0 10px;}
+.glyph-list{
+  background:#2f2820;border:1px solid var(--gold);border-radius:10px;
+  padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+.glyph{
+  aspect-ratio:1/1;background:#3f362c;border:1px solid rgba(201,153,47,.4);
+  border-radius:6px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:6px;
+  color:#e6dbc7;font-size:12px;text-align:center;padding:6px;
+}
+.glyph .sym{font-size:22px;color:var(--gold);line-height:1;}
+.glyph-cap{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center;}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:26px;}
+.timeline::before{
+  content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--jade),var(--gold));
+}
+.tl-item{position:relative;padding:0 0 24px 14px;}
+.tl-item::before{
+  content:"";position:absolute;left:-26px;top:8px;width:12px;height:12px;
+  border-radius:50%;background:var(--paper);border:3px solid var(--clay);
+}
+.tl-item h3{font-size:16.5px;color:var(--stone);margin-bottom:6px;}
+.tl-item .era{font-size:13px;color:var(--clay);letter-spacing:1px;font-family:"Courier New",monospace;}
+.tl-item p{font-size:14.5px;color:var(--muted);margin-top:6px;}
+
+/* 学习指南 */
+.study-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.study-card{
+  background:#fffdf8;border-left:4px solid var(--jade);border-radius:0 8px 8px 0;
+  padding:20px 22px;box-shadow:0 2px 10px rgba(59,49,40,.05);
+}
+.study-card h3{font-size:16.5px;color:var(--stone);margin-bottom:10px;}
+.study-card p{font-size:14.5px;color:var(--muted);}
+.study-card ul{margin:10px 0 0 18px;font-size:14.5px;color:var(--muted);}
+.study-card li{margin-bottom:5px;}
+
+/* 发音表 */
+.pron-table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fffdf8;}
+.pron-table th,.pron-table td{
+  border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top;
+}
+.pron-table th{background:var(--stone);color:#f2e9da;font-weight:600;letter-spacing:.5px;}
+.pron-table tr:nth-child(even) td{background:#faf6ee;}
+.pron-table td b{color:var(--clay);}
+
+/* 现状 */
+.status-flex{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start;}
+.status-flex p{font-size:15.5px;color:#3f362c;margin-bottom:14px;}
+.status-side{
+  background:linear-gradient(160deg,#1f6f5c,#164f42);color:#eaf5f1;
+  border-radius:10px;padding:24px 22px;
+}
+.status-side h3{font-size:17px;color:#ffe9b0;margin-bottom:14px;}
+.status-side ul{list-style:none;}
+.status-side li{
+  font-size:14.5px;padding:9px 0;border-bottom:1px dashed rgba(234,245,241,.25);
+}
+.status-side li:last-child{border-bottom:none;}
+
+/* FAQ */
+.faq-list{max-width:900px;}
+.faq-item{
+  background:#fffdf8;border:1px solid var(--line);border-radius:8px;
+  margin-bottom:12px;overflow:hidden;
+}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  font-family:inherit;font-size:16px;font-weight:600;color:var(--stone);
+  padding:17px 20px;display:flex;justify-content:space-between;gap:14px;
+  align-items:center;line-height:1.6;
+}
+.faq-q:hover{background:#faf6ee;}
+.faq-q .mark{
+  flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+  background:var(--jade);color:#fff;font-size:15px;line-height:22px;
+  text-align:center;transition:.25s;
+}
+.faq-item.open .faq-q .mark{transform:rotate(45deg);background:var(--clay);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease;
+  font-size:14.5px;color:var(--muted);
+}
+.faq-a div{padding:0 20px 18px;}
+.faq-item.open .faq-a{max-height:420px;}
+
+/* 页脚 */
+.site-footer{
+  background:#2f2820;color:#c9b79a;padding:40px 0 24px;font-size:14px;
+  border-top:4px solid var(--gold);
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:26px;
+}
+.footer-grid h3{color:#f2e9da;font-size:15px;margin-bottom:14px;letter-spacing:1px;}
+.footer-grid p{color:#a8997f;font-size:13.5px;line-height:1.9;}
+.footer-grid ul{list-style:none;}
+.footer-grid li{margin-bottom:8px;}
+.footer-grid a{color:#c9b79a;font-size:13.5px;}
+.footer-grid a:hover{color:var(--gold);}
+.footer-bottom{
+  border-top:1px solid rgba(201,153,47,.25);padding-top:18px;
+  text-align:center;font-size:13px;color:#8a7c66;
+}
+
+/* 响应式 */
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .script-block{grid-template-columns:1fr;gap:26px;}
+  .status-flex{grid-template-columns:1fr;gap:26px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px;}
+}
+@media (max-width:640px){
+  body{font-size:15.5px;}
+  .header-inner{padding:14px 16px;}
+  .brand-text h1{font-size:17.5px;}
+  .top-nav ul{gap:14px;}
+  .top-nav a{font-size:13.5px;}
+  .hero{padding:38px 0 34px;}
+  .hero h2{font-size:24px;}
+  .section{padding:38px 0;}
+  .section-head h2{font-size:21px;}
+  .glyph-list{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr;}
+  .pron-table{font-size:13.5px;}
+  .pron-table th,.pron-table td{padding:9px 10px;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <h1>玛雅语言</h1>
+        <span>语系 · 文字 · 学习</span>
+      </div>
+    </div>
+    <nav class="top-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#intro">语系概览</a></li>
+        <li><a href="#branches">分支语言</a></li>
+        <li><a href="#script">文字体系</a></li>
+        <li><a href="#history">解读历程</a></li>
+        <li><a href="#study">学习入门</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero" id="intro">
+    <div class="wrap hero-grid">
+      <div>
+        <h2>玛雅语言：<em>一支延续三千年的语系</em>，不只是失落的象形文字</h2>
+        <p>很多人第一次听到“玛雅语言”，想到的是丛林里被藤蔓覆盖的石碑。实际上，玛雅语言并不是一种已经死去的语言，而是一个包含约三十种语言的语系，今天仍有数百万使用者在墨西哥南部、危地马拉、伯利兹和洪都拉斯一带生活、耕作与交谈。本页梳理它的构成、文字、历史与学习路径。</p>
+        <div class="hero-tags">
+          <span>玛雅语系</span>
+          <span>象形文字</span>
+          <span>尤卡坦玛雅语</span>
+          <span>基切语</span>
+          <span>语言学习</span>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <h3>快速了解</h3>
+        <ul>
+          <li><span>语系归属</span><b>玛雅语系</b></li>
+          <li><span>语言数量</span><b>约 30 种</b></li>
+          <li><span>使用人口</span><b>数百万级</b></li>
+          <li><span>主要分布</span><b>中美洲北部</b></li>
+          <li><span>文字类型</span><b>意音文字</b></li>
+          <li><span>书写材料</span><b>石碑、陶器、抄本</b></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 语系概览 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>玛雅语言是什么</h2>
+        <p>“玛雅语言”这个说法容易让人误以为只有一种语言。准确地说，它指的是一个独立的语系，内部语言之间互有亲缘关系，但彼此不一定能直接通话，就像汉语和藏语同属一个语系却并不互通一样。</p>
+      </div>
+      <div class="script-block">
+        <div class="script-text">
+          <p>玛雅语系（Mayan languages）是美洲原住民语言中研究得较为深入的语系之一。它不隶属于更大的语系，目前学界普遍将其视为一个独立语系。它的分布区域以中美洲北部为核心，横跨今天的墨西哥恰帕斯州、尤卡坦半岛、危地马拉大部分地区、伯利兹以及洪都拉斯西部边缘。</p>
+          <p>需要区分两个容易混淆的概念：<strong>古典玛雅语</strong>是刻在石碑和抄本上的书面语言，大约在公元 200 至 900 年的古典期被广泛记录；而<strong>现代玛雅语言</strong>是今天各地居民口头使用的语言群。前者是后者的早期形态之一，但并非所有现代玛雅语言都直接由古典玛雅语演变而来。</p>
+          <h3>几个基本特征</h3>
+          <p>玛雅语言在结构上有一些共同点：多数语言以动词开头构成句子，属于谓—主—宾或谓—宾—主语序；没有格变化，但普遍使用作格标记来区分及物动词的施事与受事；名词可通过前缀表示所属关系；量词系统丰富，尤其在计数不同类别的物品时会使用不同的量词。</p>
+          <p>语音方面，玛雅语言普遍存在喉塞音和挤喉音（声门化辅音），这类音在汉语母语者听来较为陌生，是学习时的难点之一。声调则通常不是区分词义的主要手段。</p>
+        </div>
+        <div>
+          <div class="glyph-list" aria-hidden="true">
+            <div class="glyph"><span class="sym">𒀭</span>日 / 天</div>
+            <div class="glyph"><span class="sym">𒀁</span>水</div>
+            <div class="glyph"><span class="sym">𒀂</span>王 / 领主</div>
+            <div class="glyph"><span class="sym">𒀃</span> Jaguar</div>
+            <div class="glyph"><span class="sym">𒀄</span> 树</div>
+            <div class="glyph"><span class="sym">𒀅</span> 石</div>
+            <div class="glyph"><span class="sym">𒀆</span> 家</div>
+            <div class="glyph"><span class="sym">𒀇</span> 死</div>
+          </div>
+          <p class="glyph-cap">示意图形：玛雅文字由数百个符号组成，包含表意符号与表音符号，实际字形远比此处复杂。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分支语言 -->
+  <section class="section alt" id="branches">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>玛雅语系的主要分支</h2>
+        <p>学界通常把玛雅语系划分为几个主要分支。以下列出的是其中具有代表性、且资料相对丰富的语言，便于读者建立整体印象。</p>
+      </div>
+      <div class="branch-grid">
+        <article class="branch-card">
+          <span class="num">01 / YUCATEC</span>
+          <h3>尤卡坦玛雅语</h3>
+          <p>又称玛雅语（Maaya t'aan），是使用人数较多的玛雅语言之一，与古典玛雅语关系密切。分布在墨西哥尤卡坦半岛及伯利兹北部，日常使用场景涵盖家庭、集市与部分广播节目。</p>
+          <span class="where">墨西哥 · 伯利兹</span>
+        </article>
+        <article class="branch-card">
+          <span class="num">02 / K'ICHE'</span>
+          <h3>基切语</h3>
+          <p>危地马拉使用人数最多的玛雅语言之一，拥有丰富的口传文学传统，著名的《波波尔·乌》即以基切语写成。在危地马拉部分地区具有地方官方地位。</p>
+          <span class="where">危地马拉高地</span>
+        </article>
+        <article class="branch-card">
+          <span class="num">03 / Q'EQCHI'</span>
+          <h3>凯克奇语</h3>
+          <p>与基切语同属基切分支，分布于危地马拉中部和伯利兹南部。语言内部存在方言差异，部分社区仍以它作为第一语言。</p>
+          <span class="where">危地马拉 · 伯利兹</span>
+        </article>
+        <article class="branch-card">
+          <span class="num">04 / MAM</span>
+          <h3>马姆语</h3>
+          <p>属于马姆分支，分布在危地马拉西部与墨西哥恰帕斯边境一带。使用者多从事农业，语言传承在部分年轻群体中面临压力。</p>
+          <span class="where">危地马拉西部</span>
+        </article>
+        <article class="branch-card">
+          <span class="num">05 / TZELTAL</span>
+          <h3>策尔塔尔语</h3>
+          <p>属于乔尔—策尔塔尔分支，分布在墨西哥恰帕斯高地。与乔尔语、乔尔蒂语同源，是研究玛雅语系历史比较的重要材料之一。</p>
+          <span class="where">墨西哥恰帕斯</span>
+        </article>
+        <article class="branch-card">
+          <span class="num">06 / CH'OL</span>
+          <h3>乔尔语</h3>
+          <p>乔尔语被认为与古典玛雅语石碑文字的语言关系较近，因此在解读玛雅文字的过程中扮演了关键角色。分布在恰帕斯北部低地。</p>
+          <span class="where">墨西哥恰帕斯</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文字体系 -->
+  <section class="section" id="script">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>玛雅文字：不是字母，也不是纯粹图画</h2>
+        <p>玛雅文字常被误解为“画谜”或“象形图画”。现代解读表明，它是一套成熟的意音文字系统，兼有表意和表音功能。</p>
+      </div>
+      <div class="script-block">
+        <div class="script-text">
+          <h3>符号如何工作</h3>
+          <p>玛雅文字的基本单位通常称为“字素”或“符号”。每个符号可能承担两种角色：一是表示一个完整的词或概念，二是表示一个音节。一个词往往由多个符号组合书写，其中表音符号用来补足读音，表意符号提示含义，这种组合方式被称为“音补”。</p>
+          <p>同一段文字可以有多种书写方式，书写者会根据空间、美观和习惯选择不同符号组合。这也意味着，玛雅文字不是简单的一对一密码，而是一套有弹性的书写传统。</p>
+          <h3>书写载体</h3>
+          <p>留存至今的玛雅文字主要出现在四类载体上：石碑与建筑浮雕、陶器表面的彩绘或刻划、树皮纸抄本，以及少量骨器与贝壳。其中抄本因气候潮湿和人为破坏，存世极少，目前公认的只有少数几份。</p>
+          <h3>阅读方向</h3>
+          <p>玛雅文字通常以成对或成列的符号块出现，阅读顺序多为从左到右、从上到下，但在不同载体上也有变化。碑文常按双列排列，读法需要结合具体版面判断。</p>
+        </div>
+        <div>
+          <table class="pron-table">
+            <caption style="text-align:left;font-size:14px;color:var(--muted);padding-bottom:10px;">部分常见音值示意（以尤卡坦玛雅语拉丁转写为参考）</caption>
+            <thead>
+              <tr><th>转写</th><th>近似发音</th><th>说明</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>k'</b></td><td>挤喉的 k</td><td>声门化辅音，发音时伴随喉部收紧</td></tr>
+              <tr><td><b>t'</b></td><td>挤喉的 t</td><td>与普通 t 形成对立</td></tr>
+              <tr><td><b>x</b></td><td>类似“西”的 sh</td><td>常见于地名与人名</td></tr>
+              <tr><td><b>dz</b></td><td>类似“资”的 ts</td><td>塞擦音</td></tr>
+              <tr><td><b>u</b></td><td>类似“乌”</td><td>也可表示所属前缀</td></tr>
+              <tr><td><b>a</b></td><td>类似“啊”</td><td>长短音可能区分词义</td></tr>
+            </tbody>
+          </table>
+          <p class="glyph-cap">注：不同玛雅语言的拼写规范并不完全统一，上表仅为入门参考。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 解读历程 -->
+  <section class="section alt" id="history">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>玛雅文字的解读历程</h2>
+        <p>从被误认为“无法解读的象形符号”，到能够读出王朝名字与历史事件，玛雅文字的破译经历了近两个世纪。</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="era">16 世纪</span>
+          <h3>殖民时期的记录与焚毁</h3>
+          <p>西班牙殖民者来到中美洲后，部分传教士记录了当地语言，但也有大量抄本被焚毁。这一时期的文献既造成损失，也留下了早期语言记录。</p>
+        </div>
+        <div class="tl-item">
+          <span class="era">19 世纪</span>
+          <h3>抄本被重新发现</h3>
+          <p>欧洲学者开始系统整理玛雅遗址与抄本，德累斯顿抄本等文献进入学术视野，但当时的解读尝试多基于猜测，进展有限。</p>
+        </div>
+        <div class="tl-item">
+          <span class="era">20 世纪中期</span>
+          <h3>音节表音说的突破</h3>
+          <p>苏联学者尤里·克诺罗佐夫提出玛雅文字包含表音成分，这一观点起初受到质疑，后来逐渐被证实，成为解读工作的转折点。</p>
+        </div>
+        <div class="tl-item">
+          <span class="era">20 世纪后期</span>
+          <h3>历史内容的还原</h3>
+          <p>随着表音与表意规则被厘清，研究者开始能够读出石碑上的统治者名字、即位与战争记录，玛雅文字从“宗教符号”变为可读的历史文本。</p>
+        </div>
+        <div class="tl-item">
+          <span class="era">当代</span>
+          <h3>持续研究与社区参与</h3>
+          <p>今天的玛雅文字研究不仅属于考古学，也与当地语言社区的文化复兴相关。部分玛雅语言使用者参与文字教学与文献整理工作。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 现代现状 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>今天的玛雅语言</h2>
+        <p>玛雅语言并未消失，但不同语言的处境差异很大，有的使用稳定，有的则面临传承压力。</p>
+      </div>
+      <div class="status-flex">
+        <div>
+          <p>在危地马拉，玛雅语言在法律上获得承认，部分语言被用于双语教育和地方行政。在墨西哥，尤卡坦玛雅语等语言被纳入国家语言多样性保护框架。伯利兹和洪都拉斯也有相应的语言社区。</p>
+          <p>不过，城市化、教育体系以西班牙语为主、年轻一代迁移等因素，使得一些使用人数较少的玛雅语言出现代际传承减弱的情况。语言记录、教材编写和社区教学因此成为许多机构与本地组织的工作重点。</p>
+          <p>对普通学习者而言，这意味着可以接触到的资源并不均衡：使用人数多的语言更容易找到词典、课程和音频材料，而小语种的材料往往以学术论文或社区自编教材为主。</p>
+        </div>
+        <aside class="status-side">
+          <h3>学习前需要了解</h3>
+          <ul>
+            <li>玛雅语言不是一种，而是一个语系</li>
+            <li>古典玛雅语与现代口语不能直接等同</li>
+            <li>不同语言的教材与资源差异明显</li>
+            <li>发音中的挤喉音需要专门练习</li>
+            <li>拉丁转写方案在不同语言间略有不同</li>
+            <li>社区态度与文化背景值得尊重</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学习入门 -->
+  <section class="section alt" id="study">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>如何开始学习玛雅语言</h2>
+        <p>如果你出于兴趣、研究或旅行目的想接触玛雅语言，可以按以下顺序安排，避免一上来就被繁杂的符号系统劝退。</p>
+      </div>
+      <div class="study-grid">
+        <article class="study-card">
+          <h3>第一步：选定一种语言</h3>
+          <p>不要从“玛雅语”这个笼统概念开始。先确认你想学的是哪一种，例如尤卡坦玛雅语、基切语或乔尔语。选择标准可以是使用人数、可获取的教材数量，或你关注的地区。</p>
+        </article>
+        <article class="study-card">
+          <h3>第二步：掌握拉丁转写</h3>
+          <p>现代玛雅语言普遍使用拉丁字母书写，并有一套约定俗成的转写规则。先熟悉字母与发音的对应关系，再进入词汇和句子，效率会高很多。</p>
+          <ul>
+            <li>注意撇号表示挤喉音</li>
+            <li>x 通常读 sh 音</li>
+            <li>区分长短元音（若该语言有）</li>
+          </ul>
+        </article>
+        <article class="study-card">
+          <h3>第三步：从日常词汇入手</h3>
+          <p>问候、数字、家庭称谓、食物和自然物名称是较实用的起点。这些词汇在词典和社区教材中通常最容易找到，也便于在旅行中实际使用。</p>
+        </article>
+        <article class="study-card">
+          <h3>第四步：理解作格结构</h3>
+          <p>作格标记是玛雅语言语法中较有特点的部分，也是汉语母语者最容易困惑的地方。建议在掌握基本句型后，再专门花时间理解及物与不及物动词的差别。</p>
+        </article>
+        <article class="study-card">
+          <h3>第五步：接触文字系统</h3>
+          <p>如果目标是阅读碑文，需要另外学习玛雅文字符号。这与学习口语是两条相对独立的路径，建议先有语言基础，再进入文字解读。</p>
+        </article>
+        <article class="study-card">
+          <h3>可用资源方向</h3>
+          <p>可关注大学语言学系公开资料、中美洲研究机构出版物、社区语言项目，以及各地博物馆的展览说明。使用前注意核对资料的出版时间与适用语言。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>关于玛雅语言，初次接触者最常提出的几个问题。</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" type="button">玛雅语言现在还有人使用吗？<span class="mark">+</span></button>
+          <div class="faq-a"><div>有。玛雅语系中的多种语言至今仍在使用，使用者分布在墨西哥南部、危地马拉、伯利兹和洪都拉斯等地，总人数以百万计。但不同语言的使用状况差别较大，部分语言传承稳定，部分则面临压力。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">玛雅语言和玛雅文字是一回事吗？<span class="mark">+</span></button>
+          <div class="faq-a"><div>不是。玛雅语言指口语和书面语言本身，玛雅文字指记录这些语言的符号系统。今天多数玛雅语言用拉丁字母书写，而古典期的石碑和抄本使用玛雅文字。两者相关，但学习路径不同。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">古典玛雅语就是现在某一种玛雅语言吗？<span class="mark">+</span></button>
+          <div class="faq-a"><div>不能简单等同。古典玛雅语是古典期碑文所用的书面语言，被认为与乔尔语等低地语言关系较近，但它本身是一种历史语言形态，与今天的任何一种口语都不完全一致。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">学玛雅语言难吗？<span class="mark">+</span></button>
+          <div class="faq-a"><div>难度取决于你选择的语言和母语背景。对汉语母语者来说，挤喉音、作格结构和动词形态是需要适应的部分；但玛雅语言的拉丁转写相对规整，入门词汇也不难掌握。真正的挑战往往在于找到系统、可靠的教材。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">玛雅文字已经完全解读了吗？<span class="mark">+</span></button>
+          <div class="faq-a"><div>大部分常用符号和语法结构已被解读，研究者能够读出大量碑文内容。但仍有一些符号的读音或含义存在争议，部分文本因风化、破损或方言差异难以完全还原。解读工作仍在继续。</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">旅行时可以用玛雅语言交流吗？<span class="mark">+</span></button>
+          <div class="faq-a"><div>在部分玛雅语言社区和旅游区，使用当地语言问候或简单交流通常会受到欢迎。但并非所有地区都以玛雅语言为日常通用语，西班牙语在多数场景中更为通用。出发前可先了解目的地的语言情况。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>关于本页</h3>
+        <p>本页围绕“玛雅语言”这一主题，整理语系构成、文字体系、历史脉络与学习入门信息，供语言爱好者、旅行者和研究者参考。内容以通识介绍为主，不替代专业学术文献。</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#intro">语系概览</a></li>
+          <li><a href="#branches">分支语言</a></li>
+          <li><a href="#script">文字体系</a></li>
+          <li><a href="#history">解读历程</a></li>
+          <li><a href="#study">学习入门</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>相关方向</h3>
+        <ul>
+          <li><a href="#branches">尤卡坦玛雅语</a></li>
+          <li><a href="#branches">基切语与口传文学</a></li>
+          <li><a href="#script">玛雅文字符号</a></li>
+          <li><a href="#history">中美洲考古</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>玛雅语言 · 语系、文字与学习入门指南</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(other){ other.classList.remove('open'); });
+      if(!isOpen){ item.classList.add('open'); }
+    });
+  });
+})();
+</script>
+
+</body>
+          </html>
